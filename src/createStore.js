@@ -106,11 +106,11 @@ export default function createStore(reducer, initialState) {
       );
     }
 
-    console.log(`dispatching {action}`);
+    console.log(`dispatching ${action}`);
 
     if (isDispatching) {
       throw new Error('Reducers may not dispatch actions.' +
-                      `action was {action}`);
+                      `action was ${action}`);
     }
 
     try {
